@@ -22,7 +22,7 @@ export const getMyDetail = (req, res) => {
   });
 };
 
-export const register = async (req, res) => {
+export const register = async (req, res, next) => {
   try {
     const { name, password, email } = req.body;
     let newuser = await user.findOne({ email });
