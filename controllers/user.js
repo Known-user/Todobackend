@@ -32,7 +32,7 @@ export const register = async (req, res, next) => {
     const hashpassword = await bcrypt.hash(password, 10);
     newuser = await user.create({
       name,
-      password: hashpassword,
+      password: hashpassword, 
       email,
     });
 
